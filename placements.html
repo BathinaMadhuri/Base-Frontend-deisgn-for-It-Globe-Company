@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+
+    <title>IT-GLOBE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!--header icon CSS -->
+    <link rel="icon" href="assets/img/fav-icon-removebg-preview (1).png">
+    <!-- animations CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- font-awsome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- mobile menu CSS -->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!--css animation-->
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <!--css animation-->
+    <link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+
+
+<style id="INLINE_PEN_STYLESHEET_ID">
+    .gallery {
+        display: grid;
+        width: 100%;
+        max-width: 1002px;
+        grid-gap: 50px;
+        grid-template-columns: repeat(auto-fit, 300px);
+        grid-template-rows: auto;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    figure {
+
+        perspective: 900px;
+        max-width: 300px;
+    }
+
+    figure:nth-child(1) {
+        --imageUrl: url("https://th.bing.com/th?id=OIP.j5YJwGBptXoyoU8ml7h86gHaEK&w=333&h=187&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2");
+    }
+
+    figure:nth-child(2) {
+        --imageUrl: url("assets/img/vlogo.jpg");
+    }
+
+    figure:nth-child(3) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 21.58.59_cabf0576.jpg");
+    }
+
+    /* figure:nth-child(4) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.00.31_3c1ab29f.jpg");
+    }
+
+    figure:nth-child(5) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.07.28_1fd3dfda.jpg");
+    }
+
+    figure:nth-child(6) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.11.57_4a67fcec.jpg");
+    }
+
+    figure:nth-child(7) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.15.27_40722726.jpg");
+    }
+
+    figure:nth-child(8) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.23.01_9180ada7.jpg");
+    } */
+
+    figure:nth-child(4) {
+        --imageUrl: url("assets/img/WhatsApp\ Image\ 2024-01-28\ at\ 22.30.17_79332053.jpg");
+    }
+
+
+    .imageRoll {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        background-color: #fff;
+        box-shadow: 1em 0.5em 2em #1234, 0 0 5em #1234 inset;
+        border-radius: 10px;
+    }
+
+    .imageRoll i {
+        position: absolute;
+        left: calc(100% - 1px);
+        width: 6px;
+        height: 100%;
+        transform-style: preserve-3d;
+        transform-origin: left;
+        transition: transform 0.6s var(--delay, 0s) ease-in-out;
+        background-image: linear-gradient(#0003, #0000 5% 95%, #0003), var(--imageUrl, "");
+        background-position-x: calc(var(--bpx, 0) + 1px);
+        background-size: 300px 300px;
+    }
+
+    .imageRoll>i {
+        left: 0;
+        width: 5px;
+    }
+
+    .imageRoll:hover i {
+        transform: rotateY(var(--angle, 0deg)) skewY(var(--skew, 0deg));
+        transition-delay: var(--delay2, 0s);
+    }
+
+    .imageRoll>i {
+        --bpx: 0px;
+        --delay: 0s;
+        --delay2: 0.6s;
+        --angle: -10deg;
+        --skew: 0deg;
+    }
+
+    .imageRoll>i>i {
+        --bpx: -5px;
+        --delay: 0.01s;
+        --delay2: 0.59s;
+        --angle: -10.1deg;
+        --skew: -0.1deg;
+    }
+
+    .imageRoll>i>i>i {
+        --bpx: -10px;
+        --delay: 0.02s;
+        --delay2: 0.58s;
+        --angle: -10.2deg;
+        --skew: -0.2deg;
+    }
+
+    .imageRoll>i>i>i>i {
+        --bpx: -15px;
+        --delay: 0.03s;
+        --delay2: 0.57s;
+        --angle: -10.3deg;
+        --skew: -0.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i {
+        --bpx: -20px;
+        --delay: 0.04s;
+        --delay2: 0.56s;
+        --angle: -10.4deg;
+        --skew: -0.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i {
+        --bpx: -25px;
+        --delay: 0.05s;
+        --delay2: 0.55s;
+        --angle: -10.5deg;
+        --skew: -0.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i {
+        --bpx: -30px;
+        --delay: 0.06s;
+        --delay2: 0.54s;
+        --angle: -10.6deg;
+        --skew: -0.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i {
+        --bpx: -35px;
+        --delay: 0.07s;
+        --delay2: 0.53s;
+        --angle: -10.7deg;
+        --skew: -0.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i {
+        --bpx: -40px;
+        --delay: 0.08s;
+        --delay2: 0.52s;
+        --angle: -10.8deg;
+        --skew: -0.8deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -45px;
+        --delay: 0.09s;
+        --delay2: 0.51s;
+        --angle: -10.9deg;
+        --skew: -0.9deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -50px;
+        --delay: 0.1s;
+        --delay2: 0.5s;
+        --angle: -11deg;
+        --skew: -1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -55px;
+        --delay: 0.11s;
+        --delay2: 0.49s;
+        --angle: -11.1deg;
+        --skew: -1.1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -60px;
+        --delay: 0.12s;
+        --delay2: 0.48s;
+        --angle: -11.2deg;
+        --skew: -1.2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -65px;
+        --delay: 0.13s;
+        --delay2: 0.47s;
+        --angle: -11.3deg;
+        --skew: -1.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -70px;
+        --delay: 0.14s;
+        --delay2: 0.46s;
+        --angle: -11.4deg;
+        --skew: -1.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -75px;
+        --delay: 0.15s;
+        --delay2: 0.45s;
+        --angle: -11.5deg;
+        --skew: -1.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -80px;
+        --delay: 0.16s;
+        --delay2: 0.44s;
+        --angle: -11.6deg;
+        --skew: -1.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -85px;
+        --delay: 0.17s;
+        --delay2: 0.43s;
+        --angle: -11.7deg;
+        --skew: -1.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -90px;
+        --delay: 0.18s;
+        --delay2: 0.42s;
+        --angle: -11.8deg;
+        --skew: -1.8deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -95px;
+        --delay: 0.19s;
+        --delay2: 0.41s;
+        --angle: -11.9deg;
+        --skew: -1.9deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -100px;
+        --delay: 0.2s;
+        --delay2: 0.4s;
+        --angle: -12deg;
+        --skew: -2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -105px;
+        --delay: 0.21s;
+        --delay2: 0.39s;
+        --angle: -12.1deg;
+        --skew: -2.1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -110px;
+        --delay: 0.22s;
+        --delay2: 0.38s;
+        --angle: -12.2deg;
+        --skew: -2.2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -115px;
+        --delay: 0.23s;
+        --delay2: 0.37s;
+        --angle: -12.3deg;
+        --skew: -2.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -120px;
+        --delay: 0.24s;
+        --delay2: 0.36s;
+        --angle: -12.4deg;
+        --skew: -2.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -125px;
+        --delay: 0.25s;
+        --delay2: 0.35s;
+        --angle: -12.5deg;
+        --skew: -2.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -130px;
+        --delay: 0.26s;
+        --delay2: 0.34s;
+        --angle: -12.6deg;
+        --skew: -2.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -135px;
+        --delay: 0.27s;
+        --delay2: 0.33s;
+        --angle: -12.7deg;
+        --skew: -2.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -140px;
+        --delay: 0.28s;
+        --delay2: 0.32s;
+        --angle: -12.8deg;
+        --skew: -2.8deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -145px;
+        --delay: 0.29s;
+        --delay2: 0.31s;
+        --angle: -12.9deg;
+        --skew: -2.9deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -150px;
+        --delay: 0.3s;
+        --delay2: 0.3s;
+        --angle: -13deg;
+        --skew: -3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -155px;
+        --delay: 0.31s;
+        --delay2: 0.29s;
+        --angle: -13.1deg;
+        --skew: -3.1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -160px;
+        --delay: 0.32s;
+        --delay2: 0.28s;
+        --angle: -13.2deg;
+        --skew: -3.2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -165px;
+        --delay: 0.33s;
+        --delay2: 0.27s;
+        --angle: -13.3deg;
+        --skew: -3.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -170px;
+        --delay: 0.34s;
+        --delay2: 0.26s;
+        --angle: -13.4deg;
+        --skew: -3.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -175px;
+        --delay: 0.35s;
+        --delay2: 0.25s;
+        --angle: -13.5deg;
+        --skew: -3.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -180px;
+        --delay: 0.36s;
+        --delay2: 0.24s;
+        --angle: -13.6deg;
+        --skew: -3.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -185px;
+        --delay: 0.37s;
+        --delay2: 0.23s;
+        --angle: -13.7deg;
+        --skew: -3.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -190px;
+        --delay: 0.38s;
+        --delay2: 0.22s;
+        --angle: -13.8deg;
+        --skew: -3.8deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -195px;
+        --delay: 0.39s;
+        --delay2: 0.21s;
+        --angle: -13.9deg;
+        --skew: -3.9deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -200px;
+        --delay: 0.4s;
+        --delay2: 0.2s;
+        --angle: -14deg;
+        --skew: -4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -205px;
+        --delay: 0.41s;
+        --delay2: 0.19s;
+        --angle: -14.1deg;
+        --skew: -4.1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -210px;
+        --delay: 0.42s;
+        --delay2: 0.18s;
+        --angle: -14.2deg;
+        --skew: -4.2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -215px;
+        --delay: 0.43s;
+        --delay2: 0.17s;
+        --angle: -14.3deg;
+        --skew: -4.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -220px;
+        --delay: 0.44s;
+        --delay2: 0.16s;
+        --angle: -14.4deg;
+        --skew: -4.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -225px;
+        --delay: 0.45s;
+        --delay2: 0.15s;
+        --angle: -14.5deg;
+        --skew: -4.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -230px;
+        --delay: 0.46s;
+        --delay2: 0.14s;
+        --angle: -14.6deg;
+        --skew: -4.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -235px;
+        --delay: 0.47s;
+        --delay2: 0.13s;
+        --angle: -14.7deg;
+        --skew: -4.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -240px;
+        --delay: 0.48s;
+        --delay2: 0.12s;
+        --angle: -14.8deg;
+        --skew: -4.8deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -245px;
+        --delay: 0.49s;
+        --delay2: 0.11s;
+        --angle: -14.9deg;
+        --skew: -4.9deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -250px;
+        --delay: 0.5s;
+        --delay2: 0.1s;
+        --angle: -15deg;
+        --skew: -5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -255px;
+        --delay: 0.51s;
+        --delay2: 0.09s;
+        --angle: -15.1deg;
+        --skew: -5.1deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -260px;
+        --delay: 0.52s;
+        --delay2: 0.08s;
+        --angle: -15.2deg;
+        --skew: -5.2deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -265px;
+        --delay: 0.53s;
+        --delay2: 0.07s;
+        --angle: -15.3deg;
+        --skew: -5.3deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -270px;
+        --delay: 0.54s;
+        --delay2: 0.06s;
+        --angle: -15.4deg;
+        --skew: -5.4deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -275px;
+        --delay: 0.55s;
+        --delay2: 0.05s;
+        --angle: -15.5deg;
+        --skew: -5.5deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -280px;
+        --delay: 0.56s;
+        --delay2: 0.04s;
+        --angle: -15.6deg;
+        --skew: -5.6deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -285px;
+        --delay: 0.57s;
+        --delay2: 0.03s;
+        --angle: -15.7deg;
+        --skew: -5.7deg;
+    }
+
+    .imageRoll>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i>i {
+        --bpx: -290px;
+        --delay: 0.58s;
+        --delay2: 0.02s;
+        --angle: -15.8deg;
+        --skew: -5.8deg;
+    }
+
+    .imageRoll>figcaption {
+        position: absolute;
+        text-align: center;
+        padding-top: 2em;
+        padding-inline: 100px 25px;
+        z-index: -1;
+        font-size: 32px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .imageRoll>figcaption strong {
+        display: block;
+    }
+</style>
+
+
+
+</head>
+
+<body>
+    <!--header area start-->
+    <div class="header-area wow fadeInDown header-absolate" id="nav" data-top-top="top:0;" data-edge-strategy="set">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-block d-lg-none">
+                    <div class="mobile-menu"></div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="logo-area">
+                        <a href="#"><img src="assets/img/it.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu text-center">
+                        <nav>
+                            <ul id="slick-nav">
+                                <li><a class="scroll" href="index.html">home</a>
+
+                                </li>
+                                <li><a class="scroll" href="#about">About</a>
+                                </li>
+                                <li><a class="scroll" href="#Paper">Our Offerings</a>
+                                    <ul>
+                                        <li><a href="blog.html">Services</a></li>
+                                        <li><a href="technologies.html">Edu-tech</a></li>
+                                        <li><a href="placements.html">Placements</a></li>
+                                        <li><a href="certificate.html">certifications</a></li>
+
+                                        <li><a href="space.html">Space technology Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="scroll" href="technologies.html">Technologies</a></li>
+                                <li><a class="scroll" href="#roadmap">Roadmap</a></li>
+                                <li><a class="scroll" href="#faq">FAQ</a></li>
+                                <li><a class="scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2 text-right">
+                    <div class="card">
+                        <a href="#" class="logibtn gradient-btn">login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header area end-->
+    <div class="welcome-area wow fadeInUp" id="home">
+        <div id="particles-js"></div>
+        <div class="container" style="padding: 1rem;">
+            <div class="row">
+                <div class="col-12 col-md-6 align-self-center">
+
+                </div>
+
+            </div>
+        </div>
+        <h1 style="text-align: center;">Placements</h1>
+        <h4 class="user1" style=" text-align: center; font-size: small; color: #cbe5ff;">As we promise to be more unique
+            in nature - ITGLOBE along with the Trainings in technologies and domains also provide the best in placements
+            support from Our top notch industry partners-We design the technology in a way that what corporate need and
+            as per the corporate standards- So lets start the journey by learning things more unique -
+            All the best folks</h4>
+        <div class="gallery">
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3
+                    style="padding:2rem 2rem 0 2.5rem; color: #416a9f; font-weight: 700; font-family: 'Courier New', Courier, monospace;">
+                    ACCENTURE</h3>
+                <p style="font-weight: 600; margin-left: 2.5rem; color: rgb(90, 105, 115);">Placed candidates : <span
+                        style="font-size: large; font-style: oblique; color: brown;"> 45</span></p>
+                <h4 style="font-size: 1rem; margin-left: 2.5rem; color: rgb(32, 32, 32);"> <span
+                        style="font-size: 10px;"> with CTC of</span> <br>4.5LPA-6LPA</h4>
+            </figure>
+
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3
+                    style="padding:2rem 2rem 0 2.5rem; color: #416a9f; font-weight: 700; font-family: 'Courier New', Courier, monospace;">
+                    VIRTUSA</h3>
+                <p style="font-weight: 600; margin-left: 2.5rem; color: rgb(90, 105, 115);">Placed candidates : <span
+                        style="font-size: large; font-style: oblique; color: brown;"> 30</span></p>
+                <h4 style="font-size: 1rem; margin-left: 2.5rem; color: rgb(32, 32, 32);"> <span
+                        style="font-size: 10px;"> with CTC of</span> <br>4.5LPA-6LPA</h4>
+            </figure>
+
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3
+                    style="padding:2rem 2rem 0 2.5rem; color: #416a9f; font-weight: 700; font-family: 'Courier New', Courier, monospace;">
+                    RTCAMP</h3>
+                <p style="font-weight: 600; margin-left: 2.5rem; color: rgb(90, 105, 115);">Placed candidates : <span
+                        style="font-size: large; font-style: oblique; color: brown;"> 1</span></p>
+                <h4 style="font-size: 1rem; margin-left: 2.5rem; color: rgb(32, 32, 32);"> <span
+                        style="font-size: 10px;"> with CTC of</span> <br>4.5LPA-6LPA</h4>
+            </figure>
+
+            <!-- <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3 style="padding:2rem 2rem 0 2rem; color: #416a9f; font-weight: 700;">dcbnhn</h3>
+                <h4 style="color: #b6cde4; font-size: medium; margin-left: 2rem;">dgfgnh fggnhnn fghhjmhnh fghnmjnm</h4>
+                <p style="font-weight: 600; margin-left: 2rem; color: rgb(90, 105, 115);">4.5LPA-6LPA</p>
+            </figure>
+
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3 style="padding:2rem 2rem 0 2rem; color: #416a9f; font-weight: 700;">dcbnhn</h3>
+                <h4 style="color: #b6cde4; font-size: medium; margin-left: 2rem;">dgfgnh fggnhnn fghhjmhnh fghnmjnm</h4>
+                <p style="font-weight: 600; margin-left: 2rem; color: rgb(90, 105, 115);">4.5LPA-6LPA</p>
+            </figure>
+
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3 style="padding:2rem 2rem 0 2rem; color: #416a9f; font-weight: 700;">dcbnhn</h3>
+                <h4 style="color: #b6cde4; font-size: medium; margin-left: 2rem;">dgfgnh fggnhnn fghhjmhnh fghnmjnm</h4>
+                <p style="font-weight: 600; margin-left: 2rem; color: rgb(90, 105, 115);">4.5LPA-6LPA</p>
+            </figure>
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3 style="padding:2rem 2rem 0 2rem; color: #416a9f; font-weight: 700;">dcbnhn</h3>
+                <h4 style="color: #b6cde4; font-size: medium; margin-left: 2rem;">dgfgnh fggnhnn fghhjmhnh fghnmjnm</h4>
+                <p style="font-weight: 600; margin-left: 2rem; color: rgb(90, 105, 115);">4.5LPA-6LPA</p>
+            </figure>
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3 style="padding:2rem 2rem 0 2rem; color: #416a9f; font-weight: 700;">dcbnhn</h3>
+                <h4 style="color: #b6cde4; font-size: medium; margin-left: 2rem;">dgfgnh fggnhnn fghhjmhnh fghnmjnm</h4>
+                <p style="font-weight: 600; margin-left: 2rem; color: rgb(90, 105, 115);">4.5LPA-6LPA</p>
+            </figure>-->
+            <figure class="imageRoll">
+                <i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i><i>
+                                                                                                                                                                                                                                                            </i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i></i>
+                <h3
+                    style="padding:2rem 2rem 0 2.5rem; color: #416a9f; font-weight: 700; font-family: 'Courier New', Courier, monospace;">
+                    SPRING WORKS</h3>
+                <p style="font-weight: 600; margin-left: 2.5rem; color: rgb(90, 105, 115);">Placed candidates : <span
+                        style="font-size: large; font-style: oblique; color: brown;"> 2</span></p>
+                <h4 style="font-size: 1rem; margin-left: 2.5rem; color: rgb(32, 32, 32);"> <span
+                        style="font-size: 10px;"> with CTC of</span> <br>4.5LPA-6LPA</h4>
+            </figure>
+        </div>
+    </div>
+
+    <!--footer area start-->
+    <div class="footera-area section-padding wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer">
+                        <div class="logo-area footer">
+                            <a href="#"><img src="assets/img/it.jpg" alt="imag"></a>
+                        </div>
+                        <div class="space-20"></div>
+                        <p>Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific
+                            architects called giant larvaceans. </p>
+                        <div class="space-10"></div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <div class="single-footer">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Token Sale</a></li>
+                            <li><a href="#">Roadmap</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="single-footer">
+                        <ul>
+                            <li><a href="#">White Paper</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">APP</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer">
+                        <p>Subscribe to our Newsletter</p>
+                        <div class="space-20"></div>
+                        <div class="footer-form">
+                            <form action="#">
+                                <input type="email" placeholder="Email Address">
+                                <a href="" class="gradient-btn subscribe">GO</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer area end-->
+
+
+    <!-- jquery 2.2.4 js-->
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <!-- popper js-->
+    <script src="assets/js/popper.js"></script>
+    <!-- carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--skroller js-->
+    <script src="assets/js/skrollr.min.js"></script>
+    <!--mobile menu js-->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!--particle s-->
+    <script src="assets/js/particles.min.js"></script>
+    <!-- main js-->
+    <script src="assets/js/main.js"></script>
+
+    <script src="https://assets.codepen.io/1948355/twitterButton-2.1.0.js"></script>
+
+</body>
+
+</html>

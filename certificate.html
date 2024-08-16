@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+    <title>IT-GLOBE</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <!--header icon CSS -->
+    <link rel="icon" href="assets/img/fav-icon-removebg-preview (1).png">
+    <!-- animations CSS -->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!-- font-awsome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- mobile menu CSS -->
+    <link rel="stylesheet" href="assets/css/slicknav.min.css">
+    <!--css animation-->
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <!--css animation-->
+    <link rel="stylesheet" href="assets/css/material-design-iconic-font.min.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<style id="INLINE_PEN_STYLESHEET_ID">
+    .glassBox {
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        border-radius: 5px;
+        background: rgba(255, 255, 255, 0.05);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-right-color: rgba(255, 255, 255, 0.1);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .glassBox,
+    .glassBox * {
+        box-sizing: border-box;
+        transition: 400ms;
+    }
+
+    .glassBox__imgBox img {
+        display: block;
+        width: 90%;
+        height: auto;
+    }
+
+    .glassBox__title {
+        text-align: center;
+        margin-top: 15px;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "Lato";
+    }
+
+    .glassBox__content {
+        position: absolute;
+        right: 15px;
+        bottom: 15px;
+        left: 15px;
+        text-align: center;
+        color: #FFF;
+        font-size: 14px;
+        font-family: "Lato";
+        letter-spacing: 0.1em;
+        opacity: 0;
+    }
+
+    .glassBox:hover .glassBox__imgBox {
+        transform: translateY(-50px);
+    }
+
+    .glassBox:hover .glassBox__imgBox img {
+        transform: translate(-20px, -40px) rotate(-15deg) scale(1.4);
+    }
+
+    .welcome-img {
+        margin-left: 4rem;
+    }
+
+    .certificate {
+
+        display: flex;
+        gap: 1rem;
+        margin: 0 10rem 0 10rem;
+
+    }
+
+    @media (max-width:768px) {
+        .welcome-img {
+            margin-left: 0rem;
+        }
+
+        .certificate {
+
+            display: flex;
+            gap: 0.5rem;
+            margin: 0 28px 0 10px;
+
+        }
+
+        .glassBox {
+            height: 150px;
+        }
+
+        .glassBox__title {
+            font-size: 0.7rem;
+        }
+    }
+</style>
+
+
+<script
+    src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+<script
+    src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6d8bf8b4b479137260842506acbb12717dace0823c023e08b96360e60b0840d9.js"></script>
+<script
+    src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script
+    src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+    <!--header area start-->
+    <div class="header-area wow fadeInDown header-absolate" id="nav" data-0="position:fixed;"
+        data-top-top="position:fixed;top:0;" data-edge-strategy="set">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 d-block d-lg-none">
+                    <div class="mobile-menu"></div>
+                </div>
+                <div class="col-4 col-lg-2">
+                    <div class="logo-area">
+                        <a href="#"><img src="assets/img/it.jpg" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-8 d-none d-lg-block">
+                    <div class="main-menu text-center">
+                        <nav>
+                            <ul id="slick-nav">
+                                <li><a class="scroll" href="index.html">home</a>
+
+                                </li>
+                                <li><a class="scroll" href="#about">About</a>
+                                </li>
+                                <li><a class="scroll" href="#Paper">Our Offerings</a>
+                                    <ul>
+                                        <li><a href="blog.html">Services</a></li>
+                                        <li><a href="technologies.html">Edu-tech</a></li>
+                                        <li><a href="placements.html">Placements</a></li>
+                                        <li><a href="certificate.html">certifications</a></li>
+
+                                        <li><a href="space.html">Space technology Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="scroll" href="technologies.html">Technologies</a></li>
+                                <li><a class="scroll" href="#roadmap">Roadmap</a></li>
+                                <li><a class="scroll" href="#faq">FAQ</a></li>
+                                <li><a class="scroll" href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-4 col-lg-2 text-right">
+                    <div class="card">
+                        <a href="#" class="logibtn gradient-btn">login</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--header area end-->
+    <!--welcome area start-->
+    <div class="welcome-area wow fadeInUp" id="home">
+        <div id="particles-js"></div>
+        <div class="container" style="padding: 6rem;">
+            <div class="row">
+                <div class="col-12 col-md-6 align-self-center">
+                    <div class="welcome-right">
+                        <div class="welcome-text">
+                            <h1>CERTIFICATIONS</h1>
+                            <h4> After the training sessions were done we actively coop up with the respective folks on
+                                the feedbacks and enhancements - After successfully completion we also help the for to
+                                be the certified professional which gives the quality of portfolio.T TechWing, We
+                                Provide A Diverse Array Of Globally Recognized Certifications. Led By Our Certified
+                                Trainers, Our Programs Are Tailored To Facilitate Efficient And Educational
+                                Certification Preparation. We Offer Top Certifications From Cisco, Redhat, Amazon, And
+                                More. Your Path To Certification Starts Here.
+
+                            </h4>
+                        </div>
+                        <!-- <div class="welcome-btn">
+                            <a href="#" class="gradient-btn v2 mr-20">Register for the ICO</a>
+                            <a href="#" class="gradient-btn v2">Download Whitepaper</a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class=" col-md-6">
+                    <div class="welcome-img">
+                        <img src="assets/img/cer-main-removebg-preview.png" alt=""
+                            style="filter: drop-shadow(2px 2px 2px #536889);">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certificate">
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="assets/img/badge2.png" alt="">
+                    <h3 class="glassBox__title">CCNA</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="assets/img/badge3.png" alt="">
+                    <h3 class="glassBox__title">AWS</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="assets/img/badge4.png" alt="">
+                    <h3 class="glassBox__title">AWS Cloud</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="assets/img/badge5.png" alt="">
+                    <h3 class="glassBox__title">RedHat</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+        </div>
+        <br>
+        <br> <br>
+        <div class="certificate">
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="assets/img/it-specialist-java.png" alt="">
+                    <h3 class="glassBox__title">Java</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+            <div class="glassBox">
+                <div class="glassBox__imgBox">
+                    <img src="https://techwing.org/assets/images/certification/Angular.png" alt="">
+                    <h3 class="glassBox__title">Angular</h3>
+                </div>
+                <div class="glassBox__content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae sunt
+                    veniam
+                    adipisci fugit qui quaerat!</div>
+            </div>
+           
+        </div>
+    </div>
+    <!--welcome area end-->
+
+
+
+    <!--footer area start-->
+    <div class="footera-area section-padding wow fadeInDown">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer">
+                        <div class="logo-area footer">
+                            <a href="#"><img src="assets/img/it.jpg" alt="imag"></a>
+                        </div>
+                        <div class="space-20"></div>
+                        <p>Swimming hundreds of feet beneath the ocean’s surface in many parts of the world are prolific
+                            architects called giant larvaceans. </p>
+                        <div class="space-10"></div>
+
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-2">
+                    <div class="single-footer">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Token Sale</a></li>
+                            <li><a href="#">Roadmap</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <div class="single-footer">
+                        <ul>
+                            <li><a href="#">White Paper</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">APP</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-footer">
+                        <p>Subscribe to our Newsletter</p>
+                        <div class="space-20"></div>
+                        <div class="footer-form">
+                            <form action="#">
+                                <input type="email" placeholder="Email Address">
+                                <a href="" class="gradient-btn subscribe">GO</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer area end-->
+
+    <!-- jquery 2.2.4 js-->
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <!-- popper js-->
+    <script src="assets/js/popper.js"></script>
+    <!-- carousel js-->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- wow js-->
+    <script src="assets/js/wow.min.js"></script>
+    <!-- bootstrap js-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--skroller js-->
+    <script src="assets/js/skrollr.min.js"></script>
+    <!--mobile menu js-->
+    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <!--particle s-->
+    <script src="assets/js/particles.min.js"></script>
+    <!-- main js-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+
+</html>
